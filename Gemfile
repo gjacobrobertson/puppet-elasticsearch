@@ -7,4 +7,5 @@ gem 'rspec-puppet', :git => 'https://github.com/rodjek/rspec-puppet.git'
 gem 'puppetlabs_spec_helper', '>= 0.1.0'
 gem 'beaker'
 gem 'beaker-rspec'
+gem 'pry'
 

@@ -3,8 +3,9 @@ require 'pry'
 
 hosts.each do |host|
   # Install Puppet
+  puppetversion = ENV['PUPPET_VERSION']
   install_package host, 'rubygems'
-  on host, 'gem install puppet --no-ri --no-rdoc'
+  on host, "gem install puppet --no-ri --no-rdoc --version #{puppetversion}"
   on host, "mkdir -p #{host['distmoduledir']}"
 end
 

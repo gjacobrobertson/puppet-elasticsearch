@@ -5,7 +5,7 @@ hosts.each do |host|
   # Install Puppet
   puppetversion = ENV['VM_PUPPET_VERSION']
   install_package host, 'rubygems'
-  on host, "gem install puppet --no-ri --no-rdoc --version ~> #{puppetversion}"
+  on host, "gem install puppet --no-ri --no-rdoc --version '~> #{puppetversion}'"
   on host, "mkdir -p #{host['distmoduledir']}"
 end
 
